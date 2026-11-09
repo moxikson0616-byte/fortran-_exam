@@ -1,0 +1,200 @@
+<title>陳宣蓉 414441428 100分</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: single reading column, one section per exam question, grading console at the end */
+:root{
+  --bg:#f5f6f8; --paper:#ffffff; --fg:#1c2330; --muted:#5d6676; --line:#dde1e8;
+  --accent:#2f5d8a; --accent-soft:#e6eef6; --code-bg:#f0f2f6;
+  --ok:#1f7a4a; --ok-soft:#e3f3ea; --bad:#b23a3a; --bad-soft:#f8e5e5;
+  --display:"Noto Serif TC",serif; --body:"Noto Sans TC",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --paper:#1a2029; --fg:#e4e8ee; --muted:#9aa3b2; --line:#2c3442;
+  --accent:#7fb0e0; --accent-soft:#1e2c3c; --code-bg:#141922;
+  --ok:#5fcf8f; --ok-soft:#163024; --bad:#ef7d7d; --bad-soft:#3a1d1d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --paper:#1a2029; --fg:#e4e8ee; --muted:#9aa3b2; --line:#2c3442;
+  --accent:#7fb0e0; --accent-soft:#1e2c3c; --code-bg:#141922;
+  --ok:#5fcf8f; --ok-soft:#163024; --bad:#ef7d7d; --bad-soft:#3a1d1d; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.7}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:20px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+h1{font-family:var(--display);font-size:clamp(26px,6vw,36px);line-height:1.25;margin:0;text-wrap:balance}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--muted)}
+.meta b{color:var(--fg);font-weight:500}
+.score-badge{font-variant-numeric:tabular-nums;color:var(--accent);font-weight:700}
+section{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:12px;min-width:0}
+h2{font-size:18px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .q{font-family:var(--display);color:var(--accent)}
+h2 .pts{margin-left:auto;font-size:13px;color:var(--muted);font-weight:400;white-space:nowrap}
+.task{margin:0;padding:10px 12px;background:var(--accent-soft);border-radius:6px;font-size:14px}
+.task::before{content:"題目　";font-weight:700;color:var(--accent)}
+p{margin:0}
+pre{margin:0;background:var(--code-bg);border:1px solid var(--line);border-radius:6px;padding:12px;overflow-x:auto;font-family:var(--mono);font-size:13px;line-height:1.55}
+code{font-family:var(--mono);font-size:.92em}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+.tbl{overflow-x:auto}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:.06em}
+td.num{font-family:var(--mono)}
+.pill{display:inline-block;font-size:12px;padding:1px 9px;border-radius:999px;font-weight:500}
+.pill.ok{background:var(--ok-soft);color:var(--ok)} .pill.bad{background:var(--bad-soft);color:var(--bad)} .pill.wait{background:var(--code-bg);color:var(--muted)}
+details summary{cursor:pointer;color:var(--accent);font-size:14px}
+details[open] summary{margin-bottom:8px}
+.grader{border-color:var(--accent)}
+.row{display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row label{font-size:14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.row .hint{font-size:12px;color:var(--muted)}
+.inputs{display:flex;flex-wrap:wrap;gap:6px}
+input[type=text]{font-family:var(--mono);font-size:13px;padding:6px 8px;border:1px solid var(--line);border-radius:5px;background:var(--bg);color:var(--fg);min-width:0;flex:1 1 140px}
+input:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.total{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:12px;border-top:2px solid var(--fg)}
+.total .big{font-family:var(--display);font-size:40px;font-variant-numeric:tabular-nums;color:var(--accent);line-height:1}
+.steps{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:4px}
+footer{color:var(--muted);font-size:12px;text-align:center}
+</style>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow">目標達成評分制 · Fortran / Git / GitHub</span>
+  <h1>陳宣蓉 · 414441428 · <span class="score-badge" id="hdrScore">100</span> 分</h1>
+  <div class="meta"><span>GitHub　<b>moxikson0616-byte</b></span><span>Repo　<b>fortran-_exam</b></span><span>日期　<b>2026-11-09</b></span></div>
+</header>
+
+<section>
+  <h2><span class="q">一</span>1 加到 N 的 Fortran 程式<span class="pts">20 分</span></h2>
+  <p class="task">指揮 AI 輸出一個能做 1 加到 N 的 Fortran 程式並完成編譯，確認可以成功執行計算並輸出結果。</p>
+  <p>過程：把題目交給 AI（Claude），AI 產生下列程式；先在 Online Fortran Compiler 執行（N = 33 得到 561），再於本機 Cygwin 用 <code>gfortran sum.f90 -o sum</code> 編譯、<code>./sum</code> 執行，輸入 N = 10 得到 55，與公式 N(N+1)/2 一致。總和用 <code>integer(kind=8)</code> 儲存，避免 N 較大時溢位；N &lt; 1 時顯示錯誤訊息。</p>
+<pre>program sum_1_to_n
+  implicit none
+  integer :: n, i
+  integer(kind=8) :: total
+
+  print *, 'Enter N:'
+  read *, n
+  if (n &lt; 1) then
+    print *, 'N must be a positive integer.'
+    stop
+  end if
+
+  total = 0
+  do i = 1, n
+    total = total + i
+  end do
+
+  print *, 'Sum of 1 to', n, '=', total
+end program sum_1_to_n</pre>
+<pre>Enter N:
+10
+ Sum of 1 to          10 =                   55</pre>
+</section>
+
+<section>
+  <h2><span class="q">二</span>三次隨機驗證<span class="pts">20 分</span></h2>
+  <p class="task">指揮 AI 執行該程式進行三次隨機的驗證，以確定該程式功能的正確性。</p>
+  <p>AI 隨機抽取三個 N（1–100000），以公式 N(N+1)/2 算出標準答案，再拿程式輸出比對。</p>
+  <div class="tbl"><table>
+    <thead><tr><th>次數</th><th>N</th><th>公式答案 N(N+1)/2</th><th>程式輸出</th><th>結果</th></tr></thead>
+    <tbody id="verifyBody"></tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2><span class="q">三</span>Git 版本控制與逐行註解<span class="pts">20 分</span></h2>
+  <p class="task">將原版認錄（commit），之後指揮 AI 針對原程式碼進行逐行註解並編譯驗證成功後，再次認錄為新版。</p>
+<pre>git init -b main
+git add sum.f90
+git commit -m "v1: original program"
+# 換成 AI 加上逐行註解的版本，編譯執行仍輸出正確結果
+git commit -am "v2: add line-by-line comments"</pre>
+<pre>[main (root-commit) d58baa9] v1: original program
+ 1 file changed, 16 insertions(+)
+[main 44fc570] v2: add line-by-line comments
+ 1 file changed, 19 insertions(+), 15 deletions(-)</pre>
+  <p>註解版以 <code>gfortran sum.f90 -o sum</code> 重新編譯，執行 N = 10 仍輸出 55，驗證成功後才認錄為 v2。</p>
+  <details><summary>加註解後的新版程式</summary>
+<pre>! 計算 1 + 2 + ... + N 的總和
+program sum_1_to_n
+  implicit none                 ! 所有變數必須明確宣告
+  integer :: n, i               ! n：上限；i：迴圈計數器
+  integer(kind=8) :: total      ! 累加結果，8 位元組避免溢位
+
+  print *, 'Enter N:'           ! 提示輸入 N
+  read *, n                     ! 讀入 N
+  if (n &lt; 1) then               ! 檢查是否為正整數
+    print *, 'N must be a positive integer.'  ! 錯誤訊息
+    stop                        ! 結束程式
+  end if                        ! 結束判斷
+
+  total = 0                     ! 累加器歸零
+  do i = 1, n                   ! 從 1 迴圈到 N
+    total = total + i           ! 把 i 加進總和
+  end do                        ! 迴圈結束
+
+  print *, 'Sum of 1 to', n, '=', total  ! 輸出結果
+end program sum_1_to_n          ! 程式結束</pre></details>
+</section>
+
+<section>
+  <h2><span class="q">四</span>推送到 GitHub<span class="pts">20 分</span></h2>
+  <p class="task">將本地端已經進行版本控制的程式碼，傳送到 Github 做雲端儲存。</p>
+<pre>git remote add origin https://github.com/moxikson0616-byte/fortran-_exam.git
+git push -u origin main</pre>
+<pre>To https://github.com/moxikson0616-byte/fortran-_exam.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.</pre>
+  <p>雲端位置：<a href="https://github.com/moxikson0616-byte/fortran-_exam" target="_blank" rel="noopener">github.com/moxikson0616-byte/fortran-_exam</a>（可在 Commits 看到 v1、v2 兩個版本）</p>
+</section>
+
+<section class="grader">
+  <h2><span class="q">五</span>任務達成評分系統<span class="pts">20 分</span></h2>
+  <p class="task">要求 AI 做一個任務達成評分系統，允許輸入前四題的結果，達標就給分。</p>
+  <p>規則：每題 20 分，輸入的結果符合達標條件就給滿分，否則 0 分；本系統能正常運作，第五題得 20 分。</p>
+  <div>
+    <div class="row"><label for="g1">一、N = 10 時程式的輸出<span class="hint">達標：等於 55</span><span class="inputs"><input type="text" id="g1" inputmode="numeric"></span></label><span class="pill wait" id="s1">0</span></div>
+    <div class="row"><label>二、三次隨機驗證的程式輸出<span class="hint">達標：三次皆等於 N(N+1)/2</span><span class="inputs"><input type="text" id="g2a" placeholder="N=27877"><input type="text" id="g2b" placeholder="N=6473"><input type="text" id="g2c" placeholder="N=31450"></span></label><span class="pill wait" id="s2">0</span></div>
+    <div class="row"><label>三、v1 與 v2 的 commit 編號<span class="hint">達標：兩個不同、7 碼以上的十六進位編號</span><span class="inputs"><input type="text" id="g3a" placeholder="v1"><input type="text" id="g3b" placeholder="v2"></span></label><span class="pill wait" id="s3">0</span></div>
+    <div class="row"><label for="g4">四、GitHub repo 網址<span class="hint">達標：github.com/帳號/repo 格式</span><span class="inputs"><input type="text" id="g4"></span></label><span class="pill wait" id="s4">0</span></div>
+    <div class="row"><label>五、評分系統本身<span class="hint">本頁評分運作即達標</span></label><span class="pill ok" id="s5">20</span></div>
+  </div>
+  <div class="total"><span>總分</span><span><span class="big" id="total">0</span> / 100</span></div>
+</section>
+
+<footer>由 Claude 協助完成 · 程式於 Online Fortran Compiler 及本機 Cygwin gfortran 14.4.0 編譯執行</footer>
+</div>
+
+<script>
+const DATA={
+  q1:"55",
+  q2:["388577503","20953101","494566975"],
+  q3:["d58baa9","44fc570"],
+  q4:"https://github.com/moxikson0616-byte/fortran-_exam"
+};
+const TESTS=[27877,6473,31450];
+const $=id=>document.getElementById(id);
+const sumN=n=>(BigInt(n)*(BigInt(n)+1n)/2n).toString();
+const clean=s=>(s||"").replace(/[^0-9]/g,"");
+
+$("g1").value=DATA.q1; ["g2a","g2b","g2c"].forEach((id,i)=>$(id).value=DATA.q2[i]);
+$("g3a").value=DATA.q3[0]; $("g3b").value=DATA.q3[1]; $("g4").value=DATA.q4;
+
+function mark(id,ok){const el=$(id);el.className="pill "+(ok?"ok":"bad");el.textContent=ok?"20":"0";return ok?20:0}
+function grade(){
+  let t=20;
+  t+=mark("s1",clean($("g1").value)==="55");
+  const outs=["g2a","g2b","g2c"].map(id=>clean($(id).value));
+  t+=mark("s2",outs.every((o,i)=>o===sumN(TESTS[i])));
+  const a=$("g3a").value.trim(),b=$("g3b").value.trim(),hx=/^[0-9a-f]{7,40}$/i;
+  t+=mark("s3",hx.test(a)&&hx.test(b)&&a.toLowerCase()!==b.toLowerCase());
+  t+=mark("s4",/^(https?:\/\/)?(www\.)?github\.com\/[\w.-]+\/[\w.-]+\/?$/i.test($("g4").value.trim()));
+  $("total").textContent=t; $("hdrScore").textContent=t;
+  document.title="陳宣蓉 414441428 "+t+"分";
+  $("verifyBody").innerHTML=TESTS.map((n,i)=>{const ok=outs[i]===sumN(n);
+    return `<tr><td>${i+1}</td><td class="num">${n}</td><td class="num">${sumN(n)}</td><td class="num">${outs[i]||"—"}</td><td><span class="pill ${ok?"ok":"wait"}">${ok?"正確":"待填"}</span></td></tr>`}).join("");
+}
+document.querySelectorAll("input").forEach(el=>el.addEventListener("input",grade));
+grade();
+</script>
