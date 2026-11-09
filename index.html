@@ -1,4 +1,4 @@
-<title>陳宣蓉 414441428 100分</title>
+<title>陳宣蓉 414431428 100分</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
@@ -60,7 +60,7 @@ footer{color:var(--muted);font-size:12px;text-align:center}
 <div class="wrap">
 <header>
   <span class="eyebrow">目標達成評分制 · Fortran / Git / GitHub</span>
-  <h1>陳宣蓉 · 414441428 · <span class="score-badge" id="hdrScore">100</span> 分</h1>
+  <h1>陳宣蓉 · 414431428 · <span class="score-badge" id="hdrScore">100</span> 分</h1>
   <div class="meta"><span>GitHub　<b>moxikson0616-byte</b></span><span>Repo　<b>fortran-_exam</b></span><span>日期　<b>2026-11-09</b></span></div>
 </header>
 
@@ -191,7 +191,7 @@ function grade(){
   t+=mark("s3",hx.test(a)&&hx.test(b)&&a.toLowerCase()!==b.toLowerCase());
   t+=mark("s4",/^(https?:\/\/)?(www\.)?github\.com\/[\w.-]+\/[\w.-]+\/?$/i.test($("g4").value.trim()));
   $("total").textContent=t; $("hdrScore").textContent=t;
-  document.title="陳宣蓉 414441428 "+t+"分";
+  document.title="陳宣蓉 414431428 "+t+"分";
   $("verifyBody").innerHTML=TESTS.map((n,i)=>{const ok=outs[i]===sumN(n);
     return `<tr><td>${i+1}</td><td class="num">${n}</td><td class="num">${sumN(n)}</td><td class="num">${outs[i]||"—"}</td><td><span class="pill ${ok?"ok":"wait"}">${ok?"正確":"待填"}</span></td></tr>`}).join("");
 }
